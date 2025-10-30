@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  /* ページ全体でスクロールバーが出ないようにします */
+  overflow: hidden; 
+  background-color: #111; /* 背景色を黒に */
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* 水平方向中央揃え */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  z-index: 10; /* ボタンより手前に表示 */
+  font-size: 1.5rem;
+}
+
+.full-img {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-color: #000; /* 画像読み込み中の背景 */
+}
+
+.full-img .displayed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+  /* スムーズな色の切り替え */
+  transition: background-color 0.3s ease; 
+}
+
+button {
+  border: 0;
+  background: rgba(150,150,150,0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar {
+  width: 100vw;
+  height: 20vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: row; /* 横並び */
+  justify-content: center; /* 5枚の画像を中央に寄せる */
+  align-items: center;   /* 画像を上下中央に配置 */
+  padding: 10px; /* 上下に少し余白 */
+}
+
+.thumb-bar img {
+  width: 18%; /* 5枚で 18% * 5 = 90%。残りは隙間になる */
+  height: 90%; /* 上下のpaddingを考慮して 90% に */
+  object-fit: cover; /* サムネイルは切り取ってOK */
+  cursor: pointer;
+  opacity: 0.6; /* 通常時は少し半透明に */
+  border: 2px solid #000;
+  transition: all 0.2s ease;
+}
+
+/* サムネイルにマウスが乗った時 */
+.thumb-bar img:hover {
+  opacity: 1;
+}
