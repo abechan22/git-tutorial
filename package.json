@@ -1,0 +1,39 @@
+{
+  "name": "git-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abechan22/git-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abechan22/git-tutorial/issues"
+  },
+  "homepage": "https://github.com/abechan22/git-tutorial#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.11"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.11",
+    "fdir": "^6.5.0",
+    "nanoid": "^3.3.11",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.3",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup": "^4.52.5",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.15"
+  }
+}
